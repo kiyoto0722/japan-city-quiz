@@ -79,7 +79,8 @@ map.removeLayer(geoLayer);
 
 cities = [];
 
-fetch("geojson/pref/"+currentPref+".geojson")
+//fetch("geojson/pref/"+currentPref+".geojson")
+fetch(currentPref+".json")
 
 .then(res=>res.json())
 
