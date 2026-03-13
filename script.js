@@ -4,9 +4,6 @@ let map = L.map('map');
 //L.tileLayer(
 //'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 //).addTo(map);
-let tile = L.tileLayer(
-'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-);
 
 let geoLayer;
 
@@ -89,8 +86,6 @@ fetch(currentPref+".json")
 .then(res=>res.json())
 
 .then(data=>{
-
-tile.addTo(map);
 
 geoLayer = L.geoJSON(data,{
 
