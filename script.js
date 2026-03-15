@@ -76,12 +76,14 @@ currentPref = mode;
 
 }
 
-if(currentPref !== loadedPref){
+//if(currentPref !== loadedPref){
 
 if(geoLayer){
 map.removeLayer(geoLayer);
 }
 
+if(currentPref !== loadedPref){
+  
 cities = [];
 
 //fetch("geojson/pref/"+currentPref+".geojson")
