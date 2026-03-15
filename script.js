@@ -202,7 +202,11 @@ setTimeout(nextQuestion,800);
 
 }).addTo(map);
 
-map.fitBounds(geoLayer.getBounds());
+if(mode==="tokyo23"){
+  map.setView([35.68.139.75],11);
+}else{
+  map.fitBounds(geoLayer.getBounds());
+}
 
 remainingCities = [...cities];
 
