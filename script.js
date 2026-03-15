@@ -300,7 +300,7 @@ let shareURL = location.origin + location.pathname;
 let text =
 "【"+result.modeText+" 市区町村当てゲーム】\n"+
 correctCount+"/"+maxQuestion+"問正解！\n"+
-"あなたは "+result.rank"\n"+
+"あなたは "+result.rank+"\n"+
 "挑戦はこちら👇\n";
 
 let url =
