@@ -209,7 +209,7 @@ setTimeout(nextQuestion,800);
 }).addTo(map);
 
 if(mode==="tokyo23"){
-  map.setView([35.68.139.75],11);
+  map.setView([35.68,139.75],11);
 }else{
   map.fitBounds(geoLayer.getBounds());
 }
