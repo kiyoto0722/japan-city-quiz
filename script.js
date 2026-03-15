@@ -58,6 +58,10 @@ function nextQuestion(){
 
 answering = false;
 
+if(geoLayer){
+geoLayer.resetStyle();
+}
+
 let mode =
 document.getElementById("modeSelect").value;
 
@@ -76,13 +80,11 @@ currentPref = mode;
 
 }
 
-//if(currentPref !== loadedPref){
+if(currentPref !== loadedPref){
 
 if(geoLayer){
 map.removeLayer(geoLayer);
 }
-
-if(currentPref !== loadedPref){
   
 cities = [];
 
