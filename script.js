@@ -107,6 +107,8 @@ let mode = document.getElementById("modeSelect").value;
 
 if(mode==="random"){
 randomPref = prefs[Math.floor(Math.random()*prefs.length)];
+document.getElementById("question").innerText =
+prefJP[randomPref] + " にチャレンジ！";
 }
   
 document.getElementById("modeSelect").disabled = true;
