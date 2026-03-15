@@ -50,6 +50,9 @@ correctCount = 0;
 
 gameOver = false;
 
+document.getElementById("modeSelect").disabled = true;
+document.getElementById("startBtn").disabled = true;  
+
 nextQuestion();
 
 }
@@ -185,6 +188,9 @@ document.getElementById("finalScore").innerHTML =
 "スコア "+correctCount+" / "+maxQuestion;
 
 document.getElementById("gameoverPopup").style.display="flex";
+
+document.getElementById("modeSelect").disabled = false;
+document.getElementById("startBtn").disabled = false; 
 
 },1000);
 
