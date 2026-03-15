@@ -21,6 +21,8 @@ let maxQuestion = 5;
 let answering = false;
 let gameOver = false;
 
+let loadedPref = null;
+
 const prefs = [
 
 "hokkaido","aomori","iwate","miyagi","akita","yamagata","fukushima",
@@ -74,6 +76,8 @@ currentPref = mode;
 
 }
 
+if(currentPref !== loadedPref){
+
 if(geoLayer){
 map.removeLayer(geoLayer);
 }
@@ -86,6 +90,8 @@ fetch(currentPref+".json")
 .then(res=>res.json())
 
 .then(data=>{
+
+loadedPref = currentPref;
 
 geoLayer = L.geoJSON(data,{
 
@@ -199,6 +205,12 @@ remainingCities = [...cities];
 nextCity();
 
 });
+
+}else{
+
+nextCity();
+
+}
 
 }
 
