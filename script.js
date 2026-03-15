@@ -67,8 +67,8 @@ if(geoLayer){
 geoLayer.resetStyle();
 }
 
-//let mode =
-//document.getElementById("modeSelect").value;
+let mode =
+document.getElementById("modeSelect").value;
 
 if(mode==="random"){
 
