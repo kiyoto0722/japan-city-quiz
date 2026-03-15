@@ -1,9 +1,4 @@
-//let map = L.map('map').setView([36,138],5);
 let map = L.map('map');
-
-//L.tileLayer(
-//'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-//).addTo(map);
 
 let geoLayer;
 
@@ -184,10 +179,7 @@ gameOver = true;
 
 setTimeout(()=>{
 
-document.getElementById("finalScore").innerHTML =
-"スコア "+correctCount+" / "+maxQuestion;
-
-document.getElementById("gameoverPopup").style.display="flex";
+showResult();
 
 document.getElementById("modeSelect").disabled = false;
 document.getElementById("startBtn").disabled = false; 
@@ -264,6 +256,33 @@ setTimeout(()=>{
 result.innerHTML="";
 },1000);
 
+}
+
+function showResult(){
+  
+let modeText = document.getElementById("modeSelect").selectedOptions[0].text;
+let rank = "";
+
+if(modeText==="全国ランダム"){
+  modeText = "全国";
+}
+  
+if(correctCount===5){
+  rank = "マスター！";
+}else if(correctCount>=4){
+  rank = "かなり詳しい"
+}else if(correctCount>=3){
+  rank = "それなりに詳しい";
+else if(correctCount>=2){
+  rank = "まあまあ詳しい";
+}else{
+  rank = "要勉強";
+}
+document.getElementById("finalScore").innerHTML =
+correctCount+" / "+maxQuestion+"問正解<br><br>"+
+"あなたは "+modeText+" "+rank;
+
+document.getElementById("gameoverPopup").style.display="flex";
 }
 
 document.getElementById("shareBtn").onclick=function(){
