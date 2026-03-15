@@ -105,15 +105,16 @@ gameOver = false;
 
 let mode = document.getElementById("modeSelect").value;
 
+document.getElementById("modeSelect").disabled = true;
+document.getElementById("startBtn").disabled = true;  
+
 if(mode==="random"){
 randomPref = prefs[Math.floor(Math.random()*prefs.length)];
 document.getElementById("question").innerText =
 prefJP[randomPref] + " にチャレンジ！";
+setTimeout(()=>{},1200);
 }
   
-document.getElementById("modeSelect").disabled = true;
-document.getElementById("startBtn").disabled = true;  
-
 nextQuestion();
 
 }
