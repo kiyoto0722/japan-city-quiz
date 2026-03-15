@@ -258,8 +258,7 @@ result.innerHTML="";
 
 }
 
-function showResult(){
-  
+function getRank(){
 let modeText = document.getElementById("modeSelect").selectedOptions[0].text;
 let rank = "";
 
@@ -278,18 +277,28 @@ if(correctCount===5){
 }else{
   rank = "要勉強";
 }
+return {modeText,rank};
+}
+
+function showResult(){
+
+let result = getRank();
+
 document.getElementById("finalScore").innerHTML =
 correctCount+" / "+maxQuestion+"問正解<br><br>"+
-"あなたは "+modeText+" "+rank;
+"あなたは "+result.modeText+" "+result.rank;
 
 document.getElementById("gameoverPopup").style.display="flex";
 }
 
 document.getElementById("shareBtn").onclick=function(){
 
+let result = getRank();
+
 let text =
-"日本 市区町村当てゲーム\n"+
-"スコア "+correctCount+"/"+maxQuestion+"\n"+
+result.modeText+" 市区町村当てゲーム\n"+
+correctCount+"/"+maxQuestion+"問正解！\n"+
+"あなたは "+result.rank+"\n";
 location.href;
 
 let url =
