@@ -17,6 +17,7 @@ let answering = false;
 let gameOver = false;
 
 let loadedPref = null;
+let randomPref = null;
 
 const prefs = [
 
@@ -45,6 +46,12 @@ correctCount = 0;
 
 gameOver = false;
 
+let mode = document.getElementById("modeSelect").value;
+
+if(mode==="random"){
+randomPref = prefs[Math.floor(Math.random()*prefs.length)];
+}
+  
 document.getElementById("modeSelect").disabled = true;
 document.getElementById("startBtn").disabled = true;  
 
@@ -60,13 +67,13 @@ if(geoLayer){
 geoLayer.resetStyle();
 }
 
-let mode =
-document.getElementById("modeSelect").value;
+//let mode =
+//document.getElementById("modeSelect").value;
 
 if(mode==="random"){
 
-currentPref =
-prefs[Math.floor(Math.random()*prefs.length)];
+currentPref = randomPref;
+//prefs[Math.floor(Math.random()*prefs.length)];
 
 }else if(mode==="tokyo23"){
 
