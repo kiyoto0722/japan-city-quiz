@@ -295,15 +295,17 @@ document.getElementById("shareBtn").onclick=function(){
 
 let result = getRank();
 
+let shareURL = location.origin + location.pathname;
+  
 let text =
 result.modeText+" 市区町村当てゲーム\n"+
 correctCount+"/"+maxQuestion+"問正解！\n"+
-"あなたは "+result.rank+"\n";
-location.href;
+"あなたは "+result.rank;
 
 let url =
 "https://twitter.com/intent/tweet?text="+
-encodeURIComponent(text);
+encodeURIComponent(text)+
+"&url="+encodeURIComponent(shareURL);
 
 window.open(url);
 
