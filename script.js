@@ -112,7 +112,11 @@ if(mode==="random"){
 randomPref = prefs[Math.floor(Math.random()*prefs.length)];
 document.getElementById("question").innerText =
 prefJP[randomPref] + " にチャレンジ！";
-setTimeout(()=>{},1200);
+setTimeout(()=>{
+nextQuestion();
+},1200);
+
+return;
 }
   
 nextQuestion();
