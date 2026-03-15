@@ -273,7 +273,7 @@ if(correctCount===5){
   rank = "かなり詳しい"
 }else if(correctCount>=3){
   rank = "それなりに詳しい";
-else if(correctCount>=2){
+}else if(correctCount>=2){
   rank = "まあまあ詳しい";
 }else{
   rank = "要勉強";
