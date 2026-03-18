@@ -98,6 +98,8 @@ okinawa:"沖縄県"
 
 function startGame(){
 
+history.replaceState(null, "", "?play=1");
+
 questionCount = 0;
 correctCount = 0;
 
@@ -352,6 +354,8 @@ return {modeText,rank};
 }
 
 function showResult(){
+
+history.replaceState(null, "", "?result=1");
 
 let result = getRank();
 
