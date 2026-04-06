@@ -43,11 +43,11 @@ h1 {
   background: #1a73e8;
   color: white;
   border: none;
-  border-right: 2px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   line-height: 1.4;
   margin: 0;
+  min-height: 100px;
 }
 
 #dailyBtn:hover {
@@ -73,9 +73,14 @@ h1 {
 }
 
 #normalMode {
+  flex: 1;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 10px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #normalMode select {
