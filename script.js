@@ -274,8 +274,6 @@ function startGame() {
   isDailyMode = false;
   maxQuestion = 5;
 
-  history.replaceState(null, "", location.pathname + "?play=1");
-
   questionCount = 0;
   correctCount = 0;
   gameOver = false;
@@ -460,7 +458,6 @@ function getRank() {
 }
 
 function showResult() {
-  history.replaceState(null, "", location.pathname + "?result=1");
 
   let result = getRank();
 
