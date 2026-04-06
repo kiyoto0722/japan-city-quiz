@@ -90,7 +90,7 @@ function getDailySeed() {
   const now = new Date();
   const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000));
   //return jst.getUTCFullYear() * 10000 + (jst.getUTCMonth() + 1) * 100 + jst.getUTCDate();
-  return 20260407;
+  return 20260408;
 }
 
 
@@ -113,6 +113,7 @@ function hasTodayPlayed() {
 
 function saveTodayResult(correct) {
   localStorage.setItem(getTodayKey(), correct ? "1" : "0");
+  localStorage.setItem("dailyCity_" + getDailySeed(), currentCity);
 }
 
 function getDateStr() {
@@ -235,6 +236,8 @@ function loadPrefAndPickDailyCity(pref, seed) {
 function showDailyResult(correct, alreadyPlayed) {
   const seed = getDailySeed();
   const pref = getDailyPref(seed);
+  const savedCity = localStorage.getItem("dailyCity_" + seed);
+  if (savedCity) currentCity = savedCity;
 
   let html = "";
   if (alreadyPlayed) {
