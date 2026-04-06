@@ -9,40 +9,37 @@ body {
 h1 {
   font-size: 26px;
   margin: 15px 0;
+  color: #1a73e8;
+  letter-spacing: 2px;
 }
 
+/* 今日の1問とプルダウンを横並びにする */
 #modeRow {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  gap: 12px;
+  gap: 0;
   margin: 10px auto;
   width: 95%;
   max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #dailyBtn {
   flex: 1;
-  height: 100%;
-  min-height: 90px;
-}
-
-#normalMode {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#normalMode select {
-  width: 100%;
-  font-size: 16px;
-  padding: 8px;
-}
-
-#normalMode button {
-  width: 100%;
-  margin: 6px 0 0;
+  padding: 14px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-right: 2px solid #ccc;
+  border-radius: 0;
+  cursor: pointer;
+  line-height: 1.4;
+  margin: 0;
 }
 
 #dailyBtn:hover {
@@ -51,16 +48,60 @@ h1 {
 
 #dailySubText {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: normal;
   opacity: 0.85;
   margin-top: 4px;
 }
 
-#modeSelect {
+#normalMode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: white;
+}
+
+#normalMode select {
+  width: 100%;
+  font-size: 16px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#startBtn {
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 10px;
+  font-size: 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  background: #1e7e34;
+}
+
+/* 共通ボタンスタイル（restartBtn, shareBtn用） */
+button {
   font-size: 18px;
-  padding: 8px;
+  padding: 10px 20px;
   margin: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #2c7be5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1a5fc2;
 }
 
 #question {
@@ -155,15 +196,11 @@ h1 {
     font-size: 18px;
   }
 
-  button {
-    font-size: 16px;
-  }
-
   #map {
     height: 60vh;
   }
 
   #dailyBtn {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
