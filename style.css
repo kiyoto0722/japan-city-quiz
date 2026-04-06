@@ -78,21 +78,23 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  min-width: 0;
 }
 
 #normalMode select {
   width: 100%;
-  font-size: 16px;
-  padding: 6px;
+  font-size: 14px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
 #startBtn {
   width: 100%;
-  margin: 8px 0 0;
-  padding: 10px;
-  font-size: 16px;
+  margin: 6px 0 0;
+  padding: 6px;
+  font-size: 14px;
   background: #28a745;
   color: white;
   border: none;
