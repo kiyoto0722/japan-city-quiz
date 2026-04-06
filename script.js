@@ -466,7 +466,7 @@ function showResult() {
 
   document.getElementById("finalScore").innerHTML =
     correctCount + " / " + maxQuestion + "問正解<br><br>" +
-    "あなたは " + result.modeText + " " + result.rank;
+    result.modeText + "の地理力：<br>" + result.rank;
 
   document.getElementById("shareBtn").style.display = "none";
   document.getElementById("gameoverPopup").style.display = "flex";
