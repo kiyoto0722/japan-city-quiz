@@ -7,10 +7,21 @@ body {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
   margin: 15px 0;
-  color: #1a73e8;
-  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+#subTitle {
+  display: block;
+  font-size: 13px;
+  color: #28a745;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-top: 4px;
 }
 
 /* 今日の1問とプルダウンを横並びにする */
