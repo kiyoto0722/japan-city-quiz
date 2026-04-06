@@ -446,15 +446,15 @@ function getRank() {
   }
 
   if (correctCount === 5) {
-    rank = "マスター！";
+    rank = "🏆 地理マスター！";
   } else if (correctCount >= 4) {
-    rank = "かなり詳しい";
+    rank = "🥈 なかなかやるね";
   } else if (correctCount >= 3) {
-    rank = "それなりに詳しい";
+    rank = "🥉 まずまず";
   } else if (correctCount >= 2) {
-    rank = "まあまあ詳しい";
+    rank = "😅 惜しい！";
   } else {
-    rank = "要勉強";
+    rank = "💪 これから！";
   }
   return { modeText, rank };
 }
