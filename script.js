@@ -89,8 +89,7 @@ const prefJP = {
 function getDailySeed() {
   const now = new Date();
   const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000));
-  //return jst.getUTCFullYear() * 10000 + (jst.getUTCMonth() + 1) * 100 + jst.getUTCDate();
-  return 20260409;
+  return jst.getUTCFullYear() * 10000 + (jst.getUTCMonth() + 1) * 100 + jst.getUTCDate();
 }
 
 
@@ -245,7 +244,7 @@ function showDailyResult(correct, alreadyPlayed) {
     html += correct ? "✅ 正解でした！" : "❌ 不正解でした";
     html += "<br><br>今日の市区町村：<b>" + currentCity + "</b><br>（" + prefJP[pref] + "）";
   } else {
-    html = correct ? "⭕ 正解！" : "✕ 不正解";
+    html = correct ? "⭕️ 正解！" : "❎️ 不正解";
     html += "<br><br>今日の市区町村：<b>" + currentCity + "</b><br>（" + prefJP[pref] + "）";
   }
   html += "<br><small style='color:#888;font-size:14px'>次の問題は明日0時に更新</small>";
