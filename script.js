@@ -89,8 +89,10 @@ const prefJP = {
 function getDailySeed() {
   const now = new Date();
   const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000));
-  return jst.getUTCFullYear() * 10000 + (jst.getUTCMonth() + 1) * 100 + jst.getUTCDate();
+  //return jst.getUTCFullYear() * 10000 + (jst.getUTCMonth() + 1) * 100 + jst.getUTCDate();
+  return 20260407;
 }
+
 
 function getDailyPref(seed) {
   return prefs[seed % prefs.length];
