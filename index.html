@@ -37,7 +37,9 @@ href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 5問のクイズに挑戦して、自分の地理力を試してみてください。
 </p>-->
 
-<button id="dailyBtn">📅 今日の1問<br><span id="dailySubText">毎日0時更新・全員共通問題</span></button>
+<div id="modeRow">
+  <button id="dailyBtn">📅 今日の1問<br><span id="dailySubText">毎日0時更新・全員共通問題</span></button>
+  <div id="normalMode">
 
 <select id="modeSelect">
 
@@ -103,10 +105,11 @@ href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </select>
 
 <br>
+    <button id="startBtn">スタート</button>
+  </div>
+</div>
 
-<div id="question">スタートを押してください</div>
-
-<button id="startBtn">スタート</button>
+<div id="question"></div>
 
 <div id="result"></div>
 
