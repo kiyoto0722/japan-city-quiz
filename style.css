@@ -11,20 +11,38 @@ h1 {
   margin: 15px 0;
 }
 
-#dailyBtn {
-  display: block;
-  width: 90%;
-  max-width: 400px;
+#modeRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   margin: 10px auto;
-  padding: 14px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  background: #1a73e8;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  line-height: 1.4;
+  width: 95%;
+  max-width: 500px;
+}
+
+#dailyBtn {
+  flex: 1;
+  height: 100%;
+  min-height: 90px;
+}
+
+#normalMode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#normalMode select {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+}
+
+#normalMode button {
+  width: 100%;
+  margin: 6px 0 0;
 }
 
 #dailyBtn:hover {
@@ -43,21 +61,6 @@ h1 {
   font-size: 18px;
   padding: 8px;
   margin: 10px;
-}
-
-button {
-  font-size: 18px;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 6px;
-  background: #2c7be5;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #1a5fc2;
 }
 
 #question {
