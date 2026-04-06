@@ -90,7 +90,7 @@ function getDailySeed() {
   const now = new Date();
   const jst = new Date(now.getTime() + (9 * 60 * 60 * 1000));
   //return jst.getUTCFullYear() * 10000 + (jst.getUTCMonth() + 1) * 100 + jst.getUTCDate();
-  return 20260408;
+  return 20260409;
 }
 
 
@@ -243,7 +243,7 @@ function showDailyResult(correct, alreadyPlayed) {
   if (alreadyPlayed) {
     html = "今日はもう挑戦済みです！<br><br>";
     html += correct ? "✅ 正解でした！" : "❌ 不正解でした";
-    html += "<br><br>" + prefJP[pref] + "の問題";
+    html += "<br><br>今日の市区町村：<b>" + currentCity + "</b><br>（" + prefJP[pref] + "）";
   } else {
     html = correct ? "⭕ 正解！" : "✕ 不正解";
     html += "<br><br>今日の市区町村：<b>" + currentCity + "</b><br>（" + prefJP[pref] + "）";
