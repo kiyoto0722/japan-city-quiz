@@ -27,7 +27,7 @@ h1 {
 /* 今日の1問とプルダウンを横並びにする */
 #modeRow {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   margin: 10px auto;
   width: 95%;
@@ -38,7 +38,7 @@ h1 {
 #dailyBtn {
   flex: 1;
   padding: 14px 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   background: #1a73e8;
   color: white;
@@ -47,7 +47,7 @@ h1 {
   cursor: pointer;
   line-height: 1.4;
   margin: 0;
-  height: 80px;
+  align-self: stretch;
 }
 
 #dailyBtn:hover {
@@ -74,7 +74,6 @@ h1 {
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 10px;
-  height: 80px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
