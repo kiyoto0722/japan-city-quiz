@@ -241,10 +241,10 @@ function showDailyResult(correct, alreadyPlayed) {
   let html = "";
   if (alreadyPlayed) {
     html = "今日はもう挑戦済みです！<br><br>";
-    html += correct ? "✅ 正解でした！" : "❌ 不正解でした";
+    html += correct ? "✅ 正解でした！" : "❌ 不正解でした<br><small style='font-size:14px'>特訓モードで練習しよう！</small>";
     html += "<br><br>今日の市区町村：<b>" + currentCity + "</b><br>（" + prefJP[pref] + "）";
   } else {
-    html = correct ? "⭕️ 正解！" : "❎️ 不正解";
+    html = correct ? "⭕️ 正解！" : "❎️ 不正解<br><small style='font-size:14px'>特訓モードで練習しよう！</small>";
     html += "<br><br>今日の市区町村：<b>" + currentCity + "</b><br>（" + prefJP[pref] + "）";
   }
   html += "<br><small style='color:#888;font-size:14px'>次の問題は明日0時に更新</small>";
