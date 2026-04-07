@@ -82,6 +82,13 @@ h1 {
   min-width: 0;
 }
 
+#normalModeTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 6px;
+}
+
 #normalMode select {
   width: 100%;
   font-size: 14px;
