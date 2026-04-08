@@ -200,6 +200,12 @@ button:hover {
   background: #333;
 }
 
+.popupBox button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
 .footer {
   margin-top: 30px;
   font-size: 8px;
