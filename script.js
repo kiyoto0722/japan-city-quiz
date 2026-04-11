@@ -127,6 +127,8 @@ function startDaily() {
     return;
   }
 
+  document.getElementById("resetViewBtn").style.display = "block";
+
   isDailyMode = true;
   dailyCorrect = false;
   questionCount = 0;
@@ -236,6 +238,8 @@ function showDailyResult(correct, alreadyPlayed) {
   const seed = getDailySeed();
   const pref = getDailyPref(seed);
   const savedCity = localStorage.getItem("dailyCity_" + seed);
+  document.getElementById("resetViewBtn").style.display = "none";
+  
   if (savedCity) currentCity = savedCity;
 
   let html = "";
@@ -283,6 +287,7 @@ function startGame() {
   document.getElementById("modeSelect").disabled = true;
   document.getElementById("startBtn").disabled = true;
   document.getElementById("dailyBtn").disabled = true;
+  document.getElementById("resetViewBtn").style.display = "block";
 
   if (mode === "random") {
     randomPref = prefs[Math.floor(Math.random() * prefs.length)];
@@ -459,6 +464,7 @@ function getRank() {
 
 function showResult() {
 
+  document.getElementById("resetViewBtn").style.display = "none";
   let result = getRank();
 
   document.getElementById("finalScore").innerHTML =
@@ -476,4 +482,10 @@ document.getElementById("restartBtn").onclick = function() {
   isDailyMode = false;
   maxQuestion = 5;
   location.reload();
+};
+
+document.getElementById("resetViewBtn").onclick = function() {
+  if (geoLayer) {
+    map.fitBounds(geoLayer.getBounds());
+  }
 };
